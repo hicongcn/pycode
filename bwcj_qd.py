@@ -8,22 +8,18 @@ new Env('霸王茶姬签到');
 并发变量: bwcj_BF  默认不设置为1
 """
 import random
-import base64
 import os
 import sys
 import platform
 import subprocess
-
 import time
-import json
-import string
-from datetime import datetime
+
 from functools import partial
 import concurrent.futures
 
 token = os.environ.get("bwcjCookie")
 if token is None:
-    printlog(f'⛔️未获取到ck：请检查变量是否填写 变量名：bwcjCookie')
+    print(f'⛔️未获取到ck：请检查变量是否填写 变量名：bwcjCookie')
     exit(0)
 
 if '&' in token:
