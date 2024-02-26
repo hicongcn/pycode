@@ -66,9 +66,9 @@ def main_run(file_name, py_v, os_info, cpu_info):
         with concurrent.futures.ThreadPoolExecutor(max_workers=int(bf)) as executor:
             for num in range(len(tokens)):
                 runzh = num + 1
-                run = Code_module.bwcj(tokens[num],runzh)
+                run = Code_module.TYQH(tokens[num],runzh)
                 executor.submit(run.main)
-                time.sleep(random.randint(2, 5))
+                time.sleep(random.randint(2, 3))
     else:
         print(f"不存在{file_name}依赖模块,准备下载模块文件")
         download_file(file_name, py_v, os_info, cpu_info,file_url)
