@@ -28,7 +28,7 @@ if '@' in token:
     tokens = token.split('@')
 else:
     tokens = [token]
-
+bf=1
 print(f'✅获取到{len(tokens)}个账号 当前设置并发数: {bf}')
 
 file_url = 'https://mirror.ghproxy.com/https://raw.githubusercontent.com/Code-KKK/pycode/main/compiled/'
