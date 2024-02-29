@@ -64,10 +64,11 @@ def main_run(file_name, py_v, os_info, cpu_info):
             with concurrent.futures.ThreadPoolExecutor(max_workers=int(bf)) as executor:
                 for num in range(len(tokens)):
                     runzh = num + 1
-                    run = Code_module.MtTTZQ(tokens[num],runzh)
+                    run = Code_module.mtttzq(tokens[num],runzh)
                     executor.submit(run.main)
                     time.sleep(random.randint(2, 3))
         except Exception as e:
+            print(e)
             print('aarch64架构如遇青龙容器运行报错，请在库里lib目录下载修复ld-linux-aarch64.so.1.sh运行')
     else:
         print(f"不存在{file_name}功能模块,准备下载模块文件")
@@ -92,6 +93,6 @@ def download_file(file_name, py_v, os_info, cpu_info, url):
 
 if __name__ == '__main__':
     print = partial(print, flush=True)
-    check_environment("mt_ttzq")
+    check_environment("mtttzq")
     print('【美团·微信小程序天天赚钱】运行完成！🎉')
     
