@@ -7,4 +7,5 @@
 
 
 关于青龙容器运行报错：
-aarch64架构如果拉到so文件运行报错：Error loading shared library ld-linux-aarch64.so.1: No such file or directory，请在青龙-依赖管理-Linux下新建依赖 `gcc-aarch64-linux-gnu` 再尝试运行！
+aarch64架构如果拉到so文件运行报错：Error loading shared library ld-linux-aarch64.so.1: No such file or directory，
+请下载库lib目录的 `修复ld-linux-aarch64.so.1.sh` 在青龙里面执行，来修复容器中缺失ld-linux-aarch64.so.1系统组件
